@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <title>About the MERN Stack Project | Full-Stack Development</title>
+    <meta
+      name="description"
+      content="Discover the purpose and features of this MERN stack project built with MongoDB, Express, React, and Node.js."
+    />
+    <meta
+      name="keywords"
+      content="MERN, Full-stack, MongoDB, Express, React, Node.js, Portfolio Project"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="home">
     <div class="container">
       <section class="hero">
         <header class="header">
@@ -21,10 +30,10 @@
           <div class="menu">
             <nav class="nav">
               <ul class="nav__list">
-                <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a id="home-link" class="menuLink" href="http://127.0.0.1:5500/index.html">Home</a></li>
+                <li><a id="about-link" class="menuLink" href="about.html">About</a></li>
+                <li><a id="services-link" class="menuLink" href="services.html">Services</a></li>
+                <li><a id="contact-link" class="menuLink" href="contact.html">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -60,8 +69,9 @@
             </div>
           </div>
         </main>
+        <button id="scrollToTop">⇧</button>
       </section>
-
+      
       <section class="footer">
         <footer>
           <div class="footerContainer">
@@ -77,4 +87,3 @@
   </body>
   <script src="script.js"></script>
 </html>
-

@@ -66,10 +66,15 @@ body {
 .nav__list li a:hover {
   color: var(--color-hover);
 }
-.nav__list li a {
+.menuLink {
   color: var(--color-text);
   text-decoration: none;
   color: var(--color-sucsess);
+}
+.active {
+  font-weight: bold;
+  color: var(--color-hover);
+  text-decoration: underline;
 }
 /* Nav section end  */
 
@@ -103,6 +108,29 @@ body {
   border-radius: 1rem;
 }
 
+button {
+  color: var(--color-primary);
+  background-color: var(--color-sucsess);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+button:hover {
+  background-color: var(--color-hover);
+}
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
 /* Main section end */
 
 /* Footer section start */
@@ -128,7 +156,6 @@ body {
     height: fit-content;
     padding: 4rem;
   }
-
   .nav__list {
     flex-direction: column;
     gap: 1rem;
@@ -143,6 +170,9 @@ body {
   .placeholderImage {
     height: 300px;
   }
+  #scrollToTop {
+    right: 2rem;
+  }
   .footer {
     height: min-content;
     padding: 0.5rem 1rem;
@@ -150,14 +180,13 @@ body {
 }
 
 @media (max-width: 480px) {
-    .container{
-        height: fit-content;
-    }
+  .container {
+    height: fit-content;
+  }
   .header {
     display: flex;
     padding: 2rem;
   }
-  
   .hedingTitle {
     font-size: 2rem;
     margin-top: 10rem;
@@ -169,8 +198,14 @@ body {
   .placeholderImage {
     height: 200px;
   }
-}
-.footerContainer > p {
-  margin: 0 4rem;
+  .footerContainer {
+    gap: 0.2rem;
+  }
+  .footerContainer h6 {
+    font-size: 0.5rem;
+  }
+  .footerContainer p {
+    font-size: 0.6rem;
+  }
 }
 /* Responsive end */

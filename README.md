@@ -4,7 +4,7 @@ git push origin main -->
 
 # gpt-mentor
 
-<!-- Task 1: -->
+## Task 1:
 
 Create a Simple Landing Page:
 
@@ -24,12 +24,7 @@ Use CSS Flexbox or Grid to make the layout adjust for different screen sizes.
 Test it on both desktop and mobile views.
 Optional: Add a favicon and customize the tab title to reflect your project name.
 
-Deliverables:
-Share your code or GitHub repository link once you’re done.
-Let me know if you face any issues or need help while coding.
-Good luck! Let me know when you're ready for feedback or the next task.
-
-<!-- Task 2: -->
+## Task 2
 
 Create Two Additional Pages:
 
@@ -53,8 +48,8 @@ Style the form in the Contact page to make it visually appealing.
 Responsive Design:
 
 Ensure all pages are responsive and look good on both desktop and mobile devices.
-Deliverables:
-Update your GitHub repository with the new pages.
-Test the navigation between pages.
-Share the updated link with me for review.
-Let me know if you encounter any challenges or need guidance during implementation!
+
+## Task 3
+
+Interactive Navigation:
+Implement these features in your project
