@@ -108,27 +108,3 @@ bash
 Copy code
 node server.js
 Open http://localhost:5500 in your browser to test.
-## Ignoring Files and Folders in Git
-
-To ignore specific files and folders in your Git repository, you can create a `.gitignore` file in the root directory of your project. Add the names of the files and folders you want to ignore to this file. For example:
-
-```
-# Ignore node_modules folder
-node_modules/
-
-# Ignore log files
-*.log
-
-# Ignore environment variables
-.env
-
-# Ignore build output
-dist/
-build/
-
-# Ignore system files
-.DS_Store
-Thumbs.db
-```
-
-This will ensure that Git does not track these files and folders, keeping your repository clean and focused on the relevant code.
