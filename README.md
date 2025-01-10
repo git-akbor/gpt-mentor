@@ -108,42 +108,27 @@ bash
 Copy code
 node server.js
 Open http://localhost:5500 in your browser to test.
-## Task 5
+## Ignoring Files and Folders in Git
 
-Remove `node_modules` from Git
+To ignore specific files and folders in your Git repository, you can create a `.gitignore` file in the root directory of your project. Add the names of the files and folders you want to ignore to this file. For example:
 
-### Objective:
-Ensure that the `node_modules` directory is not tracked by Git to keep the repository clean and reduce its size.
+```
+# Ignore node_modules folder
+node_modules/
 
-### Task Details:
+# Ignore log files
+*.log
 
-1. **Create a `.gitignore` File:**
+# Ignore environment variables
+.env
 
-  If you don't already have a `.gitignore` file in your project root, create one.
+# Ignore build output
+dist/
+build/
 
-2. **Add `node_modules` to `.gitignore`:**
+# Ignore system files
+.DS_Store
+Thumbs.db
+```
 
-  Open the `.gitignore` file and add the following line to it:
-
-  ```plaintext
-  node_modules/
-  ```
-
-3. **Remove `node_modules` from Git Tracking:**
-
-  Run the following commands to remove the `node_modules` directory from Git tracking:
-
-  ```bash
-  git rm -r --cached node_modules
-  git commit -m "Remove node_modules from tracking"
-  ```
-
-4. **Push the Changes:**
-
-  Push the changes to your remote repository:
-
-  ```bash
-  git push origin main
-  ```
-
-By following these steps, the `node_modules` directory will be ignored by Git, and it will not be included in future commits.
+This will ensure that Git does not track these files and folders, keeping your repository clean and focused on the relevant code.
