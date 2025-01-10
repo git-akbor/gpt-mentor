@@ -28,9 +28,15 @@ window.addEventListener("scroll", () => {
 scrollToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-// form handling
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  // Process form data here
-  alert('Form submitted successfully!');
+  const formData = new FormData(contactForm);
+  const message = {};
+  formData.forEach((value, key) => {
+    message[key] = value;
+  });
+  console.log(message);
 });
