@@ -108,3 +108,42 @@ bash
 Copy code
 node server.js
 Open http://localhost:5500 in your browser to test.
+## Task 5
+
+Remove `node_modules` from Git
+
+### Objective:
+Ensure that the `node_modules` directory is not tracked by Git to keep the repository clean and reduce its size.
+
+### Task Details:
+
+1. **Create a `.gitignore` File:**
+
+  If you don't already have a `.gitignore` file in your project root, create one.
+
+2. **Add `node_modules` to `.gitignore`:**
+
+  Open the `.gitignore` file and add the following line to it:
+
+  ```plaintext
+  node_modules/
+  ```
+
+3. **Remove `node_modules` from Git Tracking:**
+
+  Run the following commands to remove the `node_modules` directory from Git tracking:
+
+  ```bash
+  git rm -r --cached node_modules
+  git commit -m "Remove node_modules from tracking"
+  ```
+
+4. **Push the Changes:**
+
+  Push the changes to your remote repository:
+
+  ```bash
+  git push origin main
+  ```
+
+By following these steps, the `node_modules` directory will be ignored by Git, and it will not be included in future commits.
