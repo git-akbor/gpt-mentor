@@ -1,6 +1,12 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const morgan = require("morgan")
+const helmet = require('helmet');
+const { serverPort } = require("./src/secret");
+// middleware
+app.use(morgan("dev"));
+app.use(helmet());
 
 app.use(express.static(path.join(__dirname, "../public")));
 
@@ -16,9 +22,11 @@ app.get("/contact", (req, res) => {
 app.get("/services", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/services.html"));
 });
-
+app.use((req, res, next) => {
+  res.status(404).send('Sorry, page not found');
+});
 // Start the server
-const PORT = 5500;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+
+app.listen(serverPort, () => {
+  console.log(`Server is running on http://localhost:${serverPort}`);
 });
