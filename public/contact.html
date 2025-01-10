@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body id="contact">
+    <div class="container">
+      <section class="hero">
+        <header class="header">
+          <div class="logo">
+            <h1>Logo</h1>
+          </div>
+          <div class="menu">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li><a id="home-link" class="menuLink" href="http://127.0.0.1:5500/index.html">Home</a></li>
+                <li><a id="about-link" class="menuLink" href="about.html">About</a></li>
+                <li><a id="services-link" class="menuLink" href="services.html">Services</a></li>
+                <li><a id="contact-link" class="menuLink" href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </section>
+
+      <section class="main">
+        <main class="content">
+          <div class="heding">
+            <h1 class="hedingTitle">Contact Us</h1>
+            
+              <form id="contactForm">
+                <span class="formfiled">
+                  <label for="name">Name : </label>
+                  <input type="text" name="name" placeholder="User Name" required />
+                </span>
+                <span class="formfiled">
+                  <label for="name">Email : </label>
+                  <input type="email" name="name" placeholder="User Email" required/>
+                </span>
+                <span class="formfiled">
+                  <label for="Phone">Phone : </label>
+                  <input type="tel" name="name" placeholder="User Phone" required/>
+                </span>
+                <span class="formfiled">
+                  <label for="text">Message : </label>
+                  <textarea name="message" id="message" rows="10" cols="100" required>Write Your message here</textarea>
+                </span>
+                <span class="formfiled">
+                  <button>Submit</button>
+                </span>
+                
+              </form>
+            
+          </div>
+        </main>
+        <button id="scrollToTop">⇧</button>
+      </section>
+
+      <section class="footer">
+        <footer>
+          <div class="footerContainer">
+            <h6>© 2025 Akbor Ali</h6>
+            <p>Contact us: akbor@gmail.com</p>
+          </div>
+        </footer>
+      </section>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

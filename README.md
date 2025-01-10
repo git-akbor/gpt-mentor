@@ -53,3 +53,58 @@ Ensure all pages are responsive and look good on both desktop and mobile devices
 
 Interactive Navigation:
 Implement these features in your project
+## task 4
+
+Add a Basic Backend with Node.js and Express
+Objective:
+Set up a simple server to handle requests and serve your website. This is the first step toward building a full-stack application.
+
+Task Details:
+Initialize a Node.js Project:
+
+Create a new directory named server inside your project.
+Run npm init -y to create a package.json file.
+Install Dependencies:
+
+Install express using the command:
+bash
+Copy code
+npm install express
+Set Up a Basic Server:
+
+Create a server.js file in the server directory.
+Write code to:
+Import Express.
+Set up a basic server that serves your HTML files.
+Use express.static to serve static files like CSS, JavaScript, and images.
+Example:
+
+javascript
+Copy code
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Serve static files
+app.use(express.static(path.join(__dirname, '../public')));
+
+// Serve the home page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+});
+
+// Start the server
+const PORT = 5500;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+Organize Your Files:
+
+Move your existing HTML, CSS, and JavaScript files into a public directory for better organization.
+Test the Server:
+
+Run the server using the command:
+bash
+Copy code
+node server.js
+Open http://localhost:5500 in your browser to test.
