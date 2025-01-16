@@ -29,14 +29,35 @@ scrollToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formData = new FormData(contactForm);
-  const message = {};
-  formData.forEach((value, key) => {
-    message[key] = value;
-  });
-  console.log(message);
+// contact form submission
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const phone = e.target.phone.value;
+  const message = e.target.message.value;
+
+  try {
+    const response = await fetch('http://localhost:5500/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, phone, message }),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert(result.message);
+    } else {
+      alert(result.error || 'Submission failed');
+    }
+  } catch (error) {
+    console.error('Error submitting the form', error);
+    alert('An error occurred while submitting the form');
+  }
 });
+
+
